@@ -1,0 +1,24 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',Tahoma,sans-serif;background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);min-height:100vh;color:#fff}
+.container{max-width:450px;margin:auto;padding:20px}
+.card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:28px 22px;backdrop-filter:blur(12px)}
+.header{text-align:center;margin-bottom:22px}.header h1{font-size:20px;color:#7c4dff}.header p{font-size:12px;color:#90a4ae;margin-top:5px}
+.logo{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#7c4dff,#536dfe);display:flex;align-items:center;justify-content:center;margin:auto auto 14px;font-size:26px}
+label{display:block;font-size:12px;color:#b0bec5;margin-bottom:5px;font-weight:500}
+input,select,textarea{width:100%;padding:11px 14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:10px;color:#fff;font-size:14px;outline:none;margin-bottom:14px}
+input:focus,select:focus,textarea:focus{border-color:#7c4dff}
+select option{background:#1a1a2e;color:#fff}
+.btn{width:100%;padding:13px;border:0;border-radius:10px;background:linear-gradient(135deg,#7c4dff,#536dfe);color:#fff;font-size:15px;font-weight:600;cursor:pointer;margin-top:6px}
+.btn:active{transform:scale(.98)}
+.btn-secondary{background:rgba(255,255,255,.12);color:#b0bec5;font-size:12px;padding:10px 18px;width:auto;border-radius:8px;margin-top:12px}
+.error{color:#ef5350;font-size:12px;text-align:center;margin-top:10px;display:none}
+.success-box{background:rgba(102,187,106,.15);border:1px solid rgba(102,187,106,.3);border-radius:12px;padding:16px;margin-top:14px;font-size:13px}
+.success-box h3{color:#81c784;margin-bottom:10px;font-size:14px}
+.success-box ul{list-style:none;padding-left:0}.success-box li{padding:5px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:12px;color:#cfd8dc}
+.success-box li:last-child{border-bottom:0}
+.tag{display:inline-block;background:rgba(124,77,255,.25);color:#b388ff;border-radius:6px;padding:3px 10px;font-size:11px;margin:2px}
+.proses-box{background:rgba(255,255,255,.05);border-radius:10px;padding:12px;margin-top:14px;font-size:12px;color:#90a4ae}
+.proses-box h4{color:#7c4dff;margin-bottom:8px;font-size:13px}
+.proses-box ol{padding-left:20px}.proses-box li{padding:3px 0}
+.logout{background:rgba(239,83,80,.2);color:#ef5350;border:1px solid rgba(239,83,80,.3);padding:8px 16px;border-radius:8px;font-size:12px;cursor:pointer;margin-top:14px}
+.hidden{display:none}

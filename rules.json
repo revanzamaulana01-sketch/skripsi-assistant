@@ -1,0 +1,60 @@
+{
+  "jurusan": {
+    "teknik_informatika": {
+      "topik": [
+        "Penerapan Machine Learning untuk Deteksi Dini Penyakit Tanaman",
+        "Sistem Pakar Diagnosa Kerusakan Laptop Berbasis Forward Chaining",
+        "Analisis Sentimen Media Sosial terhadap Kebijakan Publik",
+        "Pengembangan Aplikasi Mobile untuk Monitoring Kesehatan",
+        "Optimasi Algoritma Routing dalam Jaringan Komputer"
+      ],
+      "metodologi": "kuantitatif",
+      "variabel": ["akurasi", "waktu respon", "user satisfaction"],
+      "hipotesis": "Penerapan model X meningkatkan akurasi sebesar 15% dibanding metode konvensional"
+    },
+    "teknik_elektro": {
+      "topik": [
+        "Perancangan Sistem Monitoring Energi Listrik Berbasis IoT",
+        "Optimasi Panel Surya dengan Metode Maximum Power Point Tracking",
+        "Pengembangan Sistem Otomasi untuk Industri Kecil Menengah",
+        "Analisa Kualitas Daya Listrik pada Gedung Perkantoran"
+      ],
+      "metodologi": "kuantitatif",
+      "variabel": ["efisiensi energi", "biaya operasional", "keandalan sistem"],
+      "hipotesis": "Implementasi IoT mengurangi konsumsi energi hingga 20%"
+    },
+    "ekonomi": {
+      "topik": [
+        "Analisis Faktor yang Mempengaruhi Keputusan Pembelian Konsumen",
+        "Pengaruh Sosial Media terhadap Minat Usaha Milenial",
+        "Strategi Peningkatan UMKM di Era Digital",
+        "Analisis Daya Saing Produk Lokal di Pasar Global"
+      ],
+      "metodologi": "kuantitatif",
+      "variabel": ["minat beli", "kepuasan", "loyalitas"],
+      "hipotesis": "Kepuasan pelanggan berpengaruh signifikan terhadap loyalitas"
+    },
+    "kedokteran": {
+      "topik": [
+        "Gambaran Tingkat Kecemasan Pasien Pra-Operasi",
+        "Hubungan Pola Makan dengan Kejadian Obesitas pada Remaja",
+        "Pengaruh Edukasi Kesehatan terhadap Kepatuhan Minum Obat",
+        "Analisis Faktor Risiko Hipertensi di Usia Produktif"
+      ],
+      "metodologi": "kualitatif",
+      "variabel": ["kecemasan", "kepatuhan", "kualitas hidup"],
+      "hipotesis": "Edukasi kesehatan meningkatkan kepatuhan pasien"
+    },
+    "hukum": {
+      "topik": [
+        "Efektivitas Mediasi dalam Penyelesaian Sengketa Perdata",
+        "Tinjauan Yuridis Perlindungan Konsumen dalam E-Commerce",
+        "Analisis Putusan Hakim dalam Kasus Kekerasan Dalam Rumah Tangga",
+        "Keadilan Restoratif dalam Penyelesaian Tindak Pidana Anak"
+      ],
+      "metodologi": "kualitatif",
+      "variabel": ["efektivitas mediasi", "kepastian hukum", "rasa keadilan"],
+      "hipotesis": "Mediasi lebih efektif daripada litigasi dalam sengketa tertentu"
+    }
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistem Skripsi Assistant</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="card">
+<div class="header">
+<div class="logo">🎓</div>
+<h1>Sistem Skripsi Assistant</h1>
+<p>Rekomendasi Topik + Metodologi Penelitian</p>
+</div>
+<label>Pilih Jurusan</label>
+<select id="jurusan">
+<option value="">-- Pilih Jurusan --</option>
+<option value="teknik_informatika">Teknik Informatika</option>
+<option value="teknik_elektro">Teknik Elektro</option>
+<option value="ekonomi">Ekonomi</option>
+<option value="kedokteran">Kedokteran</option>
+<option value="hukum">Hukum</option>
+</select>
+<label>Minat Penelitian (opsional)</label>
+<input type="text" id="minat" placeholder="cth: kecerdasan buatan">
+<label>Metode Penelitian (opsional)</label>
+<select id="metode">
+<option value="">-- Pilih Metode --</option>
+<option value="kuantitatif">Kuantitatif</option>
+<option value="kualitatif">Kualitatif</option>
+<option value="mixed">Mixed Methods</option>
+</select>
+<button class="btn" onclick="getRekomendasi()">Dapatkan Rekomendasi</button>
+<p class="error" id="errorMsg"></p>
+<div id="result"></div>
+</div>
+</div>
+<script>
+async function getRekomendasi(){
+const j=document.getElementById('jurusan').value;
+const m=document.getElementById('minat').value;
+const mt=document.getElementById('metode').value;
+const err=document.getElementById('errorMsg');
+const res=document.getElementById('result');
+err.style.display='none';res.innerHTML='';
+if(!j){err.textContent='Pilih jurusan dulu!';err.style.display='block';return}
+try{
+const r=await fetch('http://localhost:5000/api/recommend',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({jurusan:j,minat:m||undefined,metode:mt||undefined})});
+const d=await r.json();
+if(d.status==='error'){err.textContent=d.errors.join(', ');err.style.display='block';return}
+const data=d.data;
+let html='<div class="success-box"><h3>📋 Rekomendasi untuk '+data.jurusan.replace('_',' ')+'</h3>';
+html+='<strong>Topik:</strong><br>';
+data.topik.forEach(t=>{html+='<span class="tag">'+t+'</span>'});
+html+='<br><br><strong>Metodologi:</strong> '+data.metodologi;
+html+='<br><strong>Variabel:</strong> '+data.variabel.join(', ');
+html+='<br><strong>Hipotesis:</strong> '+data.hipotesis;
+html+='</div>';
+html+='<div class="proses-box"><h4>⚙️ Proses Forward Chaining</h4><ol>';
+data.proses.forEach(p=>{html+='<li>'+p+'</li>'});
+html+='</ol><br><strong>Aturan terpicu:</strong> '+data.jumlah_aturan_terpicu+'</div>';
+res.innerHTML=html;
+}catch(e){err.textContent='Gagal konek ke server. Pastikan app.pyjalan!';err.style.display='block'}
+}
+</script>
+</body></html>
